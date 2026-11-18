@@ -1,0 +1,149 @@
+﻿<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Sportagentur UNITED4SPORTS.com</title>
+		<link rel="stylesheet" href="styles/base.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="https://www.united4sports.com/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" sizes="192x192" href="/icon.png">
+		<meta name="description" content="Sportmanagement UNITED4SPORTS.com &bull; Marketing &bull; PR &bull; Merchandising">
+		<meta name="author" content="Alexander Kuschick">
+		<meta name="copyright" content="www.united4sports.com">
+		<meta name="robots" content="NOINDEX,FOLLOW">
+		<meta name="organization" content="Marketing">
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.menubutton').click(function() {
+					$('nav').slideToggle('slow');
+				});
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/cookieconsent.min.css" />
+<script src="js/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#777"
+    },
+    "button": {
+      "background": "#008b94"
+    }
+  },
+  "content": {
+    "message": "Unsere Website verwendet Cookies für eine einwandfreie und nutzerfreundliche Funktion. Nähere Informationen dazu und zu Ihren Rechten als Benutzer finden Sie in unseren ",
+    "dismiss": "Verstanden",
+    "link": "Datenschutzhinweisen.",
+    "href": "datenschutz.html",
+    "target": "_top"
+  }
+})});
+</script>
+	</head>
+	<body>
+		<div id="menubar">
+			<ul>
+				<li><a class="menubutton" href="#menu"><img src="images/menu.png" alt="Menu" title="Auswahl" /></a></li>
+			</ul>
+		</div>
+		<div class="suche">
+		<form action="search.php" method="post" name="form1">
+		<input type="text" name="search" id="suche" placeholder="Suchbegriff(e) eingeben" onfocus="this.placeholder=''" onblur="this.placeholder='Suchbegriff(e) eingeben'">
+		<button class="submit_button"></button></form>
+		</div>
+		<header>
+		<img src="header/allianz-arena-3.jpg" alt="united4sports.com - Allianz Arena" />
+		</header>
+		<nav class="nav">
+			<ul>
+			<div class="logo">
+			<a href="index.html"><img src="graphics/united4sports-logo-2.png" alt="united4sports.com Logo" /></a></div>
+				<li><a href="sportmanagement-agentur.html">&bull; Unsere Agentur</a></li>
+				<li><a href="leistungen.html">&bull; Unsere Leistungen</a></li>
+				<li><a href="news.html">&bull; News</a></li>
+				<li><a href="kontakt.html">&bull; Kontakt</a></li>
+				<div class="search2">
+		<form action="search.php" method="post" name="form1">
+		<input type="text" name="search" id="suche2" placeholder="Suchbegriff(e) eingeben" onfocus="this.placeholder=''" onblur="this.placeholder='Suchbegriff(e) eingeben'">
+		<button class="submit2_button"></button></form>
+		</div>
+			</ul>
+		</nav>
+		<main>
+		<article>
+		<div class="logo2"><a href="index.html"><img src="graphics/united4sports-logo.jpg" alt="united4sports.com Logo" /></a></div>
+		<h1>Anfrage erfolgreich gesendet!</h1>
+		<p>Vielen Dank für Ihre Anfrage, wir werden uns baldmöglichst mit Ihnen in Verbindung setzen.</p>
+		<div class="underline"></div>
+		<h2>Social Media</h2>
+		<p>Wenn Sie unser Instagram Profil besuchen, werden von Instagram automatisch datenschutzrelevante Informationen erfasst. Mehr dazu können Sie in den <a href="datenschutz.html#instagram">Hinweisen zum Datenschutz</a> lesen.</p>
+		<a title="United4Sports Instagram" href="https://www.instagram.com/_united4sports_/" rel="nofollow" target="_blank"><img src="graphics/instagram.png" alt="United4Sports Instagram"></a>
+		<div class="underline"></div>
+		<div class="date">
+ <script>
+ <!--
+ var Monatsname = ["Januar",
+"Februar", "März", "April", "Mai","Juni",
+"Juli", "August", "September", "Oktober","November",
+"Dezember"];
+ var Tagname = ["Sonntag", "Montag",
+"Dienstag", "Mittwoch","Donnerstag", "Freitag",
+"Samstag"];
+ function modifyString()
+ {
+ var date = new Date();
+
+date.setTime(Date.parse(document.lastModified));
+ return Tagname[date.getDay()]
++ ", den " + date.getDate() + ". "+ Monatsname[date.getMonth()]
++ " " + date.getFullYear();
+ }
+ // -->
+ </script>
+ <img src="graphics/hook-date.png" alt="Hook" style="margin: 0em; margin-right: 10px; margin-bottom: -1px">Diese Seite wurde zuletzt aktualisiert am 
+ <script>
+ document.writeln(modifyString() + "<br />");
+</script></div>
+		</article>
+		</main>
+		<footer>
+			<ul>
+				<li>&copy; <a href="https://www.united4sports.com">United4Sports</a></li>
+				<li><a title="Rechtliche Angaben" href="impressum.html">Impressum</a></li>
+				<li><a title="Datenschutzerklärung nach DSGVO" href="datenschutz.html">Datenschutz</a></li>
+			</ul>
+		</footer>
+		<script>
+$(document).ready(function(){
+
+	var back_to_top_button = ['<a title="Nach oben" href="#top" class="back-to-top"><img src="graphics/top.png" alt="scrolltop" /></a>'];
+	$("body").append(back_to_top_button)
+
+	$(".back-to-top").hide();
+
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) { 
+				$('.back-to-top').fadeIn();
+			} else {
+				$('.back-to-top').fadeOut();
+			}
+		});
+
+		$('.back-to-top').click(function () { 
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+
+});
+</script>
+	</body>
+</html>
