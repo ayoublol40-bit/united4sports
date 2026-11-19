@@ -1,285 +1,171 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-area="home" data-theme="dark">
 <head>
+<script>try{var t=localStorage.getItem('u4s-theme-home');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#16191c">
-<meta name="author" content="UNITED4SPORTS">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="assets/icon.png" type="image/png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/barlowc-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css">
-<title>UNITED4SPORTS – Sportagentur für Amateurvereine aus Detmold</title>
-<meta name="description" content="UNITED4SPORTS aus Detmold: Sportmanagement, Sportmarketing und PR für Amateurvereine. Sponsoring, Vereinsmedien, Fanartikel, Teamausrüstung, Werbebanden und Turniere aus einer Hand.">
-<link rel="canonical" href="https://www.united4sports.com/">
-<meta name="robots" content="index, follow">
+<title>United for Sports – Sportmanagement und Teamsport</title>
+<meta name="description" content="United for Sports ist Ihr Partner rund um Sport, Vereine und Teams: Sportmanagement mit Beratung, Sportmarketing und Sponsoring sowie Teamsportausrüstung mit persönlichem Service.">
+<link rel="canonical" href="https://unitedforsports.com/">
+<meta name="theme-color" content="#0b0c0e">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:site_name" content="UNITED4SPORTS">
-<meta property="og:title" content="UNITED4SPORTS – Sportagentur für Amateurvereine">
-<meta property="og:description" content="Sportmanagement, Sportmarketing und PR für Amateurvereine – alles aus einer Hand.">
-<meta property="og:url" content="https://www.united4sports.com/">
-<meta property="og:image" content="https://www.united4sports.com/assets/header/allianz-arena-3.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="assets/fonts/barlowc-800i.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/header/allianz-arena-3.jpg" as="image" fetchpriority="high">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://www.united4sports.com/#website",
-      "url": "https://www.united4sports.com/",
-      "name": "UNITED4SPORTS",
-      "inLanguage": "de-DE",
-      "publisher": { "@id": "https://www.united4sports.com/#organisation" }
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://www.united4sports.com/#organisation",
-      "name": "United4Sports.com – Sport- & Vermarktungsagentur",
-      "alternateName": "UNITED4SPORTS",
-      "description": "Sportmanagement-, Sportmarketing- und PR-Agentur für Amateurvereine.",
-      "url": "https://www.united4sports.com/",
-      "logo": "https://www.united4sports.com/assets/logo.png",
-      "image": "https://www.united4sports.com/assets/header/allianz-arena-3.jpg",
-      "telephone": "+49 5231 9487187",
-      "faxNumber": "+49 5231 9487186",
-      "founder": { "@type": "Person", "name": "Alexander Kuschick" },
-      "parentOrganization": { "@type": "Organization", "name": "AGENTUR KUSCHICK Unternehmensberatung" },
-      "address": { "@type": "PostalAddress", "streetAddress": "Bentruper Weg 14", "postalCode": "32758", "addressLocality": "Detmold", "addressRegion": "Nordrhein-Westfalen", "addressCountry": "DE" },
-      "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "13:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "14:00", "closes": "18:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
-      ],
-      "knowsAbout": ["Sportmanagement", "Sportmarketing", "Fußballvermarktung", "Sponsoring", "Vereinsberatung", "PR", "Merchandising", "Teamausrüstung", "Eventmanagement"],
-      "sameAs": ["https://www.instagram.com/_united4sports_/"]
-    }
-  ]
-}
-</script>
+<meta property="og:site_name" content="United for Sports">
+<meta property="og:title" content="United for Sports – Sportmanagement und Teamsport">
+<meta property="og:description" content="United for Sports ist Ihr Partner rund um Sport, Vereine und Teams: Sportmanagement mit Beratung, Sportmarketing und Sponsoring sowie Teamsportausrüstung mit persönlichem Service.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/barlowc-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
-
-<header class="header" id="top">
-  <div class="wrap">
-    <a class="logo" href="index.html" aria-label="UNITED4SPORTS – zur Startseite" aria-current="page">
-      <img src="assets/logo.png" alt="UNITED4SPORTS.com Sportmanagement" width="330" height="110">
-    </a>
-    <nav class="nav" aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="sportmanagement-agentur.html">Unsere Agentur</a></li>
-        <li><a href="leistungen.html">Unsere Leistungen</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="wm" href="index.html" aria-label="United for Sports – zur Startseite"><span class="wm-bar" aria-hidden="true"><i></i><i></i></span><span><b>United</b> for Sports</span></a>
+    <nav class="nav" aria-label="Bereiche">
+      <a class="n-sm" href="sportmanagement.html">Sportmanagement</a>
+      <a class="n-ts" href="teamsport.html">Teamsport</a>
     </nav>
-    <a class="btn btn-primary header-cta" href="kontakt.html#formular">Anfrage stellen</a>
-    <button class="menu-btn" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav"><span></span></button>
+    <button class="tgl" type="button" aria-pressed="false" aria-label="Helles Design einschalten"><svg class="ic i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></button>
+    <a class="btn btn--ghost btn--sm hdr-cta" href="#kontakt">Kontakt</a>
   </div>
+  <div class="progress" aria-hidden="true"></div>
 </header>
-
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
-  <a href="index.html" aria-current="page">Start <span>00</span></a>
-  <a href="sportmanagement-agentur.html">Unsere Agentur <span>01</span></a>
-  <a href="leistungen.html">Unsere Leistungen <span>02</span></a>
-  <a href="news.html">News <span>03</span></a>
-  <a href="kontakt.html">Kontakt <span>04</span></a>
-  <a class="btn btn-primary" href="kontakt.html#formular">Jetzt Anfrage stellen</a>
-  <p class="mn-contact">Telefon<br><a href="tel:+4952319487187">05231 94871-87</a></p>
-</nav>
-
 <main id="inhalt">
-  <section class="hero home-hero" aria-labelledby="hero-title">
-    <div class="hero-media"><img src="assets/header/allianz-arena-3.jpg" alt="" width="1490" height="551" fetchpriority="high"></div>
-    <div class="wrap">
-      <p class="eyebrow"><span class="stars" aria-hidden="true">★★★</span> Sportmanagement aus Detmold</p>
-      <h1 id="hero-title">
-        <span class="line"><span>Die Sport&shy;agentur</span></span>
-        <span class="line"><span>für Amateur&shy;vereine,</span></span>
-        <span class="line"><span class="it">die mehr wollen.</span></span>
-      </h1>
-      <p class="lead">Sportmarketing, PR und Vereinsmanagement aus einer Hand – von der Sponsorensuche über Fanartikel und Teamausrüstung bis zum eigenen Turnier.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="sportmanagement-agentur.html">Eintreten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="kontakt.html#formular">Anfrage stellen</a>
-      </div>
-    </div>
-    <a class="scroll-hint" href="#start-intro"><i></i>Scrollen</a>
-  </section>
-
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>PR</span><span>Medien</span><span>Marketing &amp; Sportrechte</span><span>Merchandising</span><span>Sportequipment</span><span>Druck &amp; Veredelung</span><span>Werbebanden</span>
-      <span>PR</span><span>Medien</span><span>Marketing &amp; Sportrechte</span><span>Merchandising</span><span>Sportequipment</span><span>Druck &amp; Veredelung</span><span>Werbebanden</span>
-    </div>
-  </div>
-
-  <section class="section" id="start-intro" aria-labelledby="intro-title">
-    <div class="wrap split">
-      <div>
-        <p class="eyebrow"><span class="stars" aria-hidden="true">★★★</span> Wer wir sind</p>
-        <h2 id="intro-title" class="js-reveal" style="margin:1rem 0 1.25rem">Vom Ehrenamt zum <span class="it">modernen Sport&shy;anbieter</span></h2>
-        <p class="lead js-reveal">Der Sport wird professioneller – und viele, vor allem kleinere Vereine kommen strukturell, organisatorisch und finanziell kaum hinterher.</p>
-        <p class="js-reveal">United4Sports.com ist eine der wenigen Agenturen im Sportbusiness, die gezielt Amateurclubs berät und vermarktet. Als Marke der AGENTUR KUSCHICK Unternehmensberatung übernehmen wir Aufgaben, die das Ehrenamt allein kaum stemmen kann.</p>
-        <a class="btn btn-dark js-reveal" href="sportmanagement-agentur.html" style="margin-top:.5rem">Unsere Agentur <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="split-media js-reveal">
-        <img src="assets/news/sghb.jpg" alt="Frauenmannschaft der SG Holzhausen-Barntrup in neuer, von United4Sports organisierter Ausrüstung" width="600" height="400" loading="lazy">
-        <span class="badge">Seit 2005 im Einsatz</span>
-      </div>
+  <section class="hero" aria-labelledby="h-title">
+    <div class="hero-media"><img src="assets/header/spiel-d-zagreb-rosenborg-cl-quali-2019-08-21.jpg" width="1490" height="551" alt="" fetchpriority="high"></div>
+    <div class="wrap hero-in">
+      <p class="eyebrow rv">Sportmanagement · Teamsport</p>
+      <h1 id="h-title" class="split">Ein Partner für Sport, Vereine und Teams.</h1>
+      <p class="lead rv" style="--d:.16s">United for Sports bündelt Beratung, Sportmarketing und Sponsoring mit Teamsportausrüstung und persönlichem Service – unter einer gemeinsamen Marke.</p>
+      <div class="duo rv" style="--d:.22s" aria-hidden="true"><i></i><i></i></div>
+      <nav class="hx rv" style="--d:.28s" aria-label="Schnellwahl Bereiche">
+        <a href="sportmanagement.html"><span class="hx-n">01</span><span class="hx-t">Sportmanagement</span><span class="hx-s">Beratung · Sportmarketing · Sponsoring</span><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a href="teamsport.html"><span class="hx-n">02</span><span class="hx-t">Teamsport</span><span class="hx-s">Fußball · Ausrüstung · Namen &amp; Nummern</span><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </nav>
     </div>
   </section>
 
-  <section class="section bg-white" aria-labelledby="svc-title">
-    <div class="wrap">
-      <div class="head" style="max-width:52rem">
-        <p class="eyebrow"><span class="stars" aria-hidden="true">★★★</span> Leistungen</p>
-        <h2 id="svc-title" class="js-reveal">Alles, was Ihr Verein <span class="it">braucht</span></h2>
-      </div>
-      <div class="svc-grid">
-        <article class="svc feature js-card">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 4.5h-5L8 10z"/></svg></span>
-          <span class="num">Hauptprofession</span>
-          <h3>Fußball&shy;vermarktung</h3>
-          <p>Unser Kerngeschäft: professionelle Vermarktung von Fußballvereinen – mit Netzwerk, Erfahrung und viel persönlichem Einsatz.</p>
-          <a class="btn btn-primary" href="leistungen.html">Alle Leistungen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </article>
-        <a class="svc js-card" href="leistungen.html#pr"><span class="num">01</span><h3>PR &amp; Events</h3><p>Pressearbeit, Vereins-News, Sportfeste, Benefizspiele und Fotoarbeiten.</p><span class="more">Mehr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a class="svc js-card" href="leistungen.html#medien"><span class="num">02</span><h3>Medien</h3><p>Flyer, Vereinszeitschriften und Internetseiten im Corporate Design.</p><span class="more">Mehr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a class="svc js-card" href="leistungen.html#marketing"><span class="num">03</span><h3>Marketing &amp; Sportrechte</h3><p>Sponsorenakquise und Werbepakete rund um Verein und Stadion.</p><span class="more">Mehr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a class="svc js-card" href="leistungen.html#merchandising"><span class="num">04</span><h3>Merchandising</h3><p>Schals, Wimpel, Fahnen, Caps, Shirts und Fanartikel von A bis Z.</p><span class="more">Mehr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a class="svc js-card" href="leistungen.html#equipment"><span class="num">05</span><h3>Sportequipment</h3><p>Ausrüstung von Adidas, Nike, Puma, Derbystar, Jako &amp; Co. – inkl. Bonusprogramm.</p><span class="more">Mehr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a class="svc js-card" href="leistungen.html#druck"><span class="num">06</span><h3>Druck &amp; Veredelung</h3><p>Wappen, Sponsorenlogos, Namen und Nummern auf Trikots, Taschen und Co.</p><span class="more">Mehr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a class="svc js-card" href="leistungen.html#gutscheine"><span class="num">07</span><h3>Gutscheine</h3><p>Warengutscheine über 25 € oder 50 € – die Geschenkidee für Fans.</p><span class="more">Mehr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a class="svc js-card" href="leistungen.html#werbebanden"><span class="num">08</span><h3>Werbebanden</h3><p>Eigene Bandensysteme mit Alu-Dibond-Platten für Ihre Sponsoren.</p><span class="more">Mehr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      </div>
-    </div>
-  </section>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Sportmanagement</span><i class="o"></i><span class="o">Teamsport</span><i class="c"></i><span>Beratung</span><i class="o"></i><span class="o">Fußball</span><i class="c"></i><span>Sponsoring</span><i class="o"></i><span class="o">Namen & Nummern</span><i class="c"></i><span>Sportmanagement</span><i class="o"></i><span class="o">Teamsport</span><i class="c"></i><span>Beratung</span><i class="o"></i><span class="o">Fußball</span><i class="c"></i><span>Sponsoring</span><i class="o"></i><span class="o">Namen & Nummern</span><i class="c"></i><span>Sportmanagement</span><i class="o"></i><span class="o">Teamsport</span><i class="c"></i><span>Beratung</span><i class="o"></i><span class="o">Fußball</span><i class="c"></i><span>Sponsoring</span><i class="o"></i><span class="o">Namen & Nummern</span><i class="c"></i><span>Sportmanagement</span><i class="o"></i><span class="o">Teamsport</span><i class="c"></i><span>Beratung</span><i class="o"></i><span class="o">Fußball</span><i class="c"></i><span>Sponsoring</span><i class="o"></i><span class="o">Namen & Nummern</span><i class="c"></i></div></div>
 
-  <section class="section" aria-labelledby="clients-title">
+  <section class="sec" id="bereiche" aria-labelledby="b-title">
     <div class="wrap">
-      <div class="head center">
-        <p class="eyebrow"><span class="stars" aria-hidden="true">★★★</span> Referenzen</p>
-        <h2 id="clients-title" class="js-reveal">Vereine &amp; Partner, die auf uns <span class="it">setzen</span></h2>
-      </div>
-      <ul class="logo-wall">
-        <li class="js-logo"><img src="assets/logos/fc-lippe-detmold.jpg" alt="FC Lippe Detmold e.V." width="280" height="188" loading="lazy"></li>
-        <li class="js-logo"><img src="assets/logos/sc-bielefeld.jpg" alt="SC Bielefeld 04/26 e.V." width="280" height="188" loading="lazy"></li>
-        <li class="js-logo"><img src="assets/logos/bv-cloppenburg.jpg" alt="BV Cloppenburg e.V." width="280" height="188" loading="lazy"></li>
-        <li class="js-logo"><img src="assets/logos/sgib.jpg" alt="SG Istrup-Brüntrup" width="280" height="188" loading="lazy"></li>
-        <li class="js-logo"><img src="assets/logos/inter-holzhausen.jpg" alt="SC Inter Holzhausen von 1990 e.V." width="280" height="188" loading="lazy"></li>
-        <li class="js-logo"><img src="assets/logos/sg-holzhausen.jpg" alt="SG Holzhausen-Barntrup" width="280" height="188" loading="lazy"></li>
-        <li class="js-logo"><img src="assets/logos/bkk24.jpg" alt="BKK24" width="280" height="188" loading="lazy"></li>
-        <li class="js-logo"><img src="assets/logos/germeta.jpg" alt="Germeta" width="280" height="188" loading="lazy"></li>
-      </ul>
-      <p style="text-align:center;margin:2rem auto 0"><a class="btn btn-line" href="sportmanagement-agentur.html#voices-title">Stimmen unserer Partner lesen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
-    </div>
-  </section>
-
-  <section class="section bg-white" aria-labelledby="news-title">
-    <div class="wrap">
-      <div class="voices-head" style="margin-bottom:clamp(2rem,5vw,3rem)">
-        <div class="head" style="margin:0">
-          <p class="eyebrow"><span class="stars" aria-hidden="true">★★★</span> News</p>
-          <h2 id="news-title" class="js-reveal">Aktuelles von <span class="it">U4S</span></h2>
-        </div>
-        <a class="btn btn-line" href="news.html">Alle News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="news-teaser">
-        <a class="nt js-card" href="news.html#aa-drinks">
-          <div class="nt-img"><img src="assets/news/aa-drink.jpg" alt="" width="906" height="336" loading="lazy"></div>
-          <div class="nt-body"><time datetime="2023-05-22">22.05.2023</time><h3>Gewinnspiel mit AA Drinks</h3><p class="muted" style="margin:0">20 % sparen und einen Kühlschrank für euren Verein gewinnen.</p><span class="more">Weiterlesen →</span></div>
-        </a>
-        <a class="nt js-card" href="news.html#sg-holzhausen-barntrup">
-          <div class="nt-img"><img src="assets/news/sghb.jpg" alt="" width="600" height="400" loading="lazy"></div>
-          <div class="nt-body"><time datetime="2020-07-22">22.07.2020</time><h3>SG Holzhausen-Barntrup neu ausgerüstet</h3><p class="muted" style="margin:0">Neue Zip-Tops und Bälle für die komplette Frauenabteilung.</p><span class="more">Weiterlesen →</span></div>
-        </a>
-        <a class="nt js-card" href="news.html#boekendorf">
-          <div class="nt-img"><img src="assets/news/sv-boekendorf-frauencup-2011.jpg" alt="" width="500" height="492" loading="lazy" style="object-position:50% 25%"></div>
-          <div class="nt-body"><time datetime="2011-07-01">01.07.2011</time><h3>1. Bökendorfer Frauenfußball-Cup</h3><p class="muted" style="margin:0">Mit Bundesligateams aus Mönchengladbach und Herford.</p><span class="more">Weiterlesen →</span></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta" aria-labelledby="cta-title">
-    <div class="wrap">
-      <h2 id="cta-title" class="js-reveal">Ihr Verein. <em>Unser Einsatz.</em></h2>
-      <p class="js-reveal">Erzählen Sie uns, wo der Schuh drückt – wir kümmern uns um den Rest. Persönlich, direkt und mit Leidenschaft für den Amateursport.</p>
-      <div class="cta-actions js-reveal">
-        <a class="btn btn-dark" href="kontakt.html#formular">Anfrage stellen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="tel:+4952319487187">05231 94871-87</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section tight" aria-labelledby="social-title">
-    <div class="wrap">
-      <div class="social-card js-reveal">
-        <div class="ig-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+      <div class="sec-head">
         <div>
-          <p class="eyebrow">Social Media</p>
-          <h2 id="social-title">Live dabei auf <span class="it">Instagram</span></h2>
-          <p class="small">Hinweis: Wenn Sie unser Instagram-Profil besuchen, erfasst Instagram automatisch datenschutzrelevante Informationen. Mehr dazu in unseren <a href="datenschutz.html#instagram">Hinweisen zum Datenschutz</a>.</p>
+          <p class="eyebrow rv">Unsere Bereiche</p>
+          <h2 id="b-title" class="rv">Zwei Bereiche. Eine Marke.</h2>
         </div>
-        <a class="btn btn-dark" href="https://www.instagram.com/_united4sports_/" target="_blank" rel="noopener">@_united4sports_
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="sr-only">(öffnet in neuem Fenster)</span></a>
+        <p class="rv">Sportmanagement und Teamsport sind klar getrennt und doch aus einer Hand. Wählen Sie den Bereich, der zu Ihrem Anliegen passt.</p>
+      </div>
+      <div class="split-tiles">
+        <article class="tile tile--sm rv" aria-labelledby="t-sm">
+          <div class="tile-media"><img src="assets/header/berliner-olympiastadion.jpg" width="1490" height="551" alt="" loading="lazy"></div>
+          <figure class="plate plate--sm"><img src="assets/brand/u4s-logo-sportmanagement.jpg" width="1600" height="697" alt="United4Sports.com Sportmanagement" loading="lazy"></figure>
+          <div>
+            <p class="tile-k">Bereich 01</p>
+            <h3 id="t-sm">Sportmanagement</h3>
+            <p>Beratung für Vereine, Sportmarketing und Sponsoring – für Vereine, die sich gut aufstellen und sichtbarer werden wollen.</p>
+            <ul class="tags"><li>Beratung</li><li>Sportmarketing</li><li>Sponsoring</li></ul>
+            <div class="tile-act">
+              <a class="btn btn--orange btn--main" href="sportmanagement.html">Zum Sportmanagement <svg class="ic ic-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="tile tile--ts rv" style="--d:.1s" aria-labelledby="t-ts">
+          <div class="tile-media"><img src="assets/header/stadion-kabine-vfb-fichte-bielefeld.jpg" width="1490" height="551" alt="" loading="lazy"></div>
+          <figure class="plate plate--ts"><img src="assets/brand/u4s-logo-teamsport.jpg" width="568" height="152" alt="United4Sports – 100 % Teamsport" loading="lazy"></figure>
+          <div>
+            <p class="tile-k">Bereich 02</p>
+            <h3 id="t-ts">Teamsport</h3>
+            <p>Fußball- und Teamsportausrüstung mit persönlichem Service – individuell veredelt mit Namen, Nummern und Vereinslogo.</p>
+            <ul class="tags"><li>Fußball</li><li>Teamsportausrüstung</li><li>Individualisierung</li></ul>
+            <div class="tile-act">
+              <a class="btn btn--cyan btn--main" href="teamsport.html">Zum Teamsport <svg class="ic ic-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+              <a class="tile-sub" href="https://shop.unitedforsports.com" target="_blank" rel="noopener">Teamsport-Shop <svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="vh"> (externer Shop, öffnet in neuem Tab)</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--alt" aria-labelledby="a-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow rv">Für wen</p>
+          <h2 id="a-title" class="rv">Für Vereine, Sportler und Unternehmen.</h2>
+        </div>
+        <p class="rv">Unterschiedliche Anliegen, eine Anlaufstelle – und der passende Bereich für jedes Thema.</p>
+      </div>
+      <ul class="aud">
+        <li class="rv"><h3>Vereine</h3><p>Beratung, Vermarktung und Ausrüstung für Vorstand, Abteilungen und Mannschaften.</p></li>
+        <li class="rv" style="--d:.08s"><h3>Sportler</h3><p>Teamsportausrüstung mit persönlicher Beratung und individueller Veredelung.</p></li>
+        <li class="rv" style="--d:.16s"><h3>Unternehmen</h3><p>Sponsoring-Partnerschaften und Präsenz im Sport – passend zu Ihrer Marke.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec contact" id="kontakt" aria-labelledby="k-title">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow rv">Kontakt</p>
+        <h2 id="k-title" class="rv">Sprechen wir über Ihr Vorhaben.</h2>
+        <p class="lead rv">Ob Vereinsberatung, Sponsoring oder Ausrüstung für die ganze Mannschaft: Schreiben Sie uns oder rufen Sie an.</p>
+      </div>
+      <div class="cbox rv" style="--d:.1s" data-spot>
+        <dl class="clist">
+          <div class="crow"><span class="cic"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><dt>Telefon</dt><dd><span class="ph">[Telefonnummer folgt]</span></dd></div></div>
+          <div class="crow"><span class="cic"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><dt>E-Mail</dt><dd><span class="ph">[E-Mail-Adresse folgt]</span></dd></div></div>
+          <div class="crow"><span class="cic"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><dt>Anschrift</dt><dd><span class="ph">[Straße, PLZ Ort]</span></dd></div></div>
+        </dl>
+        <p class="cbox-k">Anfrage per E-Mail zu</p>
+        <div class="cbox-act">
+          <a class="btn btn--line btn--sm" style="--c:var(--orange-t)" href="mailto:?subject=Anfrage%20Sportmanagement">Sportmanagement</a>
+          <a class="btn btn--line btn--sm" style="--c:var(--cyan-t)" href="mailto:?subject=Anfrage%20Teamsport">Teamsport</a>
+        </div>
       </div>
     </div>
   </section>
 </main>
-
-<footer class="footer">
+<footer class="ftr">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <a class="footer-logo" href="index.html"><img src="assets/logo.png" alt="UNITED4SPORTS.com Sportmanagement" width="330" height="110" loading="lazy"></a>
-        <p style="margin-top:1.25rem;max-width:36ch">Sportmanagement, Sportmarketing und PR für Amateurvereine – eine Marke der AGENTUR KUSCHICK Unternehmensberatung.</p>
+    <div class="ftr-grid">
+      <div class="ftr-brand">
+        <a class="wm" href="index.html" aria-label="United for Sports – zur Startseite"><span class="wm-bar" aria-hidden="true"><i></i><i></i></span><span><b>United</b> for Sports</span></a>
+        <p>Sportmanagement und Teamsport unter einer gemeinsamen Marke.</p>
       </div>
-      <nav aria-labelledby="f-nav">
-        <h2 id="f-nav">Navigation</h2>
+      <nav aria-labelledby="f-areas">
+        <h2 id="f-areas">Bereiche</h2>
         <ul>
-          <li><a href="index.html">Start</a></li>
-          <li><a href="sportmanagement-agentur.html">Unsere Agentur</a></li>
-          <li><a href="leistungen.html">Unsere Leistungen</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="sportmanagement.html" style="--c:var(--orange)"><span class="dot"></span>Sportmanagement</a></li>
+          <li><a href="teamsport.html" style="--c:var(--cyan)"><span class="dot"></span>Teamsport</a></li>
+          <li><a href="https://shop.unitedforsports.com" target="_blank" rel="noopener">Teamsport-Shop <svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="vh"> (externer Shop, öffnet in neuem Tab)</span></a></li>
         </ul>
       </nav>
+      <div>
+        <h2>Kontakt</h2>
+        <ul>
+          <li><span class="ph">[Telefonnummer]</span></li>
+          <li><span class="ph">[E-Mail-Adresse]</span></li>
+          <li><span class="ph">[Anschrift]</span></li>
+        </ul>
+      </div>
       <nav aria-labelledby="f-legal">
         <h2 id="f-legal">Rechtliches</h2>
         <ul>
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
-          <li><a href="https://www.instagram.com/_united4sports_/" target="_blank" rel="noopener">Instagram<span class="sr-only"> (öffnet in neuem Fenster)</span></a></li>
         </ul>
       </nav>
-      <div class="f-contact">
-        <h2>Kontakt</h2>
-        <address>United4Sports.com<br>Sport- &amp; Vermarktungsagentur<br>Bentruper Weg 14<br>32758 Detmold</address>
-        <ul>
-          <li><a href="tel:+4952319487187">05231 94871-87</a></li>
-          <li><span class="js-mail">detmold [at] united4sports.com</span></li>
-        </ul>
-      </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; <span class="js-year">2026</span> United4Sports</span>
-      <span>Sportagentur für Amateurvereine · Detmold</span>
+    <div class="ftr-base">
+      <span>&copy; <span data-year>2026</span> United for Sports</span>
+      <span>unitedforsports.com</span>
     </div>
   </div>
 </footer>
-
-<a href="#top" class="to-top" aria-label="Nach oben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
-
-<script src="assets/js/gsap.min.js" defer></script>
-<script src="assets/js/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/site.js" defer></script>
 </body>
 </html>

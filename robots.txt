@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /neue-site/
+Disallow: /_archiv/
+Disallow: /original/
 
-Sitemap: https://www.united4sports.com/sitemap.xml
+Sitemap: https://unitedforsports.com/sitemap.xml

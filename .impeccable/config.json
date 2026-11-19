@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "assets/css/style.css"
+        ],
+        "createdAt": "2026-11-19T16:12:55.280Z",
+        "reason": "Claude: .tile::before is a full-width top color bar marking the orange/cyan areas, as the brief requires clearly separated area colors; not a side tab"
+      }
+    ]
+  }
+}
