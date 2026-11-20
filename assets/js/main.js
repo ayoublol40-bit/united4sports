@@ -3,6 +3,7 @@
   var doc = document.documentElement;
   var area = doc.dataset.area || 'home';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   doc.classList.add('js');
 
   /* ---------- Hell / Dunkel ---------- */
@@ -16,7 +17,7 @@
       tgl.setAttribute('aria-pressed', light ? 'true' : 'false');
       tgl.setAttribute('aria-label', light ? 'Dunkles Design einschalten' : 'Helles Design einschalten');
     }
-    if (meta) meta.setAttribute('content', getComputedStyle(doc).getPropertyValue('--bg').trim() || '#0b0c0e');
+    if (meta) meta.setAttribute('content', getComputedStyle(doc).getPropertyValue('--bg').trim() || '#14161a');
   }
   function setTheme(t) {
     doc.dataset.theme = t;
@@ -32,19 +33,24 @@
       var r = tgl.getBoundingClientRect();
       var x = r.left + r.width / 2, y = r.top + r.height / 2;
       var end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
-      document.startViewTransition(function () { setTheme(next); }).ready.then(function () {
+      doc.classList.add('theme-vt');
+      var vt = document.startViewTransition(function () { setTheme(next); });
+      vt.ready.then(function () {
         doc.animate(
           { clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + end + 'px at ' + x + 'px ' + y + 'px)'] },
           { duration: 750, easing: 'cubic-bezier(.2,.7,.2,1)', pseudoElement: '::view-transition-new(root)' }
         );
       });
+      vt.finished.then(function () { doc.classList.remove('theme-vt'); });
     });
   }
 
-  /* ---------- Überschriften Wort für Wort ---------- */
+  /* ---------- Überschriften Wort für Wort (letzte Wörter farbig) ---------- */
   document.querySelectorAll('.split').forEach(function (h) {
-    var words = h.textContent.trim().split(/\s+/);
-    h.setAttribute('aria-label', h.textContent.trim());
+    var text = h.textContent.trim();
+    var words = text.split(/\s+/);
+    var acc = parseInt(h.dataset.acc || '0', 10);
+    h.setAttribute('aria-label', text);
     h.textContent = '';
     words.forEach(function (w, i) {
       var outer = document.createElement('span');
@@ -53,34 +59,48 @@
       var inner = document.createElement('span');
       inner.textContent = w;
       inner.style.setProperty('--i', i);
+      if (acc && i >= words.length - acc) inner.className = 'acc';
       outer.appendChild(inner);
       h.appendChild(outer);
       if (i < words.length - 1) h.appendChild(document.createTextNode(' '));
     });
   });
 
-  /* ---------- Kopfzeile, Lesefortschritt, Parallaxe ---------- */
+  /* ---------- Kopfzeile, Lesefortschritt, Parallaxe, Nach-oben ---------- */
   var hdr = document.querySelector('.hdr');
   var bar = document.querySelector('.progress');
   var media = document.querySelector('.hero .hero-media, .phero .hero-media');
+  var top = document.querySelector('.totop');
+  var pars = reduce ? [] : Array.prototype.slice.call(document.querySelectorAll('[data-par]'));
+  var RING = 138.2;
   var ticking = false;
   function onScroll() {
     var y = window.scrollY;
+    var max = doc.scrollHeight - innerHeight;
+    var p = max > 0 ? Math.min(1, y / max) : 0;
     if (hdr) hdr.classList.toggle('is-scrolled', y > 8);
-    if (bar) {
-      var max = document.documentElement.scrollHeight - innerHeight;
-      bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+    if (bar) bar.style.transform = 'scaleX(' + p + ')';
+    if (top) {
+      top.classList.toggle('show', y > innerHeight * 0.8);
+      top.style.setProperty('--ring', (RING * (1 - p)).toFixed(1));
     }
     if (media && !reduce && y < innerHeight * 1.2) media.style.transform = 'translate3d(0,' + (y * 0.22) + 'px,0)';
+    for (var i = 0; i < pars.length; i++) {
+      var r = pars[i].getBoundingClientRect();
+      if (r.bottom < -100 || r.top > innerHeight + 100) continue;
+      var off = (r.top + r.height / 2 - innerHeight / 2) / innerHeight; // -1 … 1
+      pars[i].style.setProperty('--py', (off * -7).toFixed(2) + '%');
+    }
     ticking = false;
   }
   window.addEventListener('scroll', function () {
     if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
   }, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
   onScroll();
 
   /* ---------- Inhalte sanft einblenden ---------- */
-  var items = document.querySelectorAll('.rv');
+  var items = document.querySelectorAll('.rv, .split');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -92,8 +112,8 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ---------- Lichtkegel, der der Maus folgt ---------- */
-  if (!reduce && window.matchMedia('(hover: hover)').matches) {
+  if (!reduce && fine) {
+    /* ---------- Lichtkegel, der der Maus folgt ---------- */
     document.querySelectorAll('[data-spot]').forEach(function (el) {
       el.addEventListener('pointermove', function (e) {
         var r = el.getBoundingClientRect();
@@ -103,6 +123,35 @@
       el.addEventListener('pointerleave', function () {
         el.style.removeProperty('--mx');
         el.style.removeProperty('--my');
+      });
+    });
+
+    /* ---------- Karten neigen sich zur Maus ---------- */
+    document.querySelectorAll('[data-tilt]').forEach(function (el) {
+      var max = el.classList.contains('hcard') ? 5 : 4;
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        el.classList.add('is-tilting');
+        el.style.transform = 'perspective(900px) rotateX(' + (-py * max).toFixed(2) + 'deg) rotateY(' + (px * max).toFixed(2) + 'deg)';
+      });
+      el.addEventListener('pointerleave', function () {
+        el.classList.remove('is-tilting');
+        el.style.transform = '';
+      });
+    });
+
+    /* ---------- Haupt-Buttons ziehen leicht zur Maus ---------- */
+    document.querySelectorAll('.btn--accent:not(.btn--sm), .btn--orange:not(.btn--main), .btn--cyan:not(.btn--main), .btn--dark').forEach(function (b) {
+      b.addEventListener('pointermove', function (e) {
+        var r = b.getBoundingClientRect();
+        b.style.setProperty('--tx', ((e.clientX - r.left - r.width / 2) * 0.18).toFixed(1) + 'px');
+        b.style.setProperty('--ty', ((e.clientY - r.top - r.height / 2) * 0.28).toFixed(1) + 'px');
+      });
+      b.addEventListener('pointerleave', function () {
+        b.style.removeProperty('--tx');
+        b.style.removeProperty('--ty');
       });
     });
   }

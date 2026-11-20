@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /_archiv/
+Disallow: /_build/
 Disallow: /original/
 
 Sitemap: https://unitedforsports.com/sitemap.xml
